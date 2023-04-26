@@ -1,0 +1,77 @@
+<div class="title">
+  <h2>Paquetes</h2>
+  <div>
+    <div class="left-element">
+      <mat-form-field>
+        <mat-label>Buscar</mat-label>
+        <input matInput placeholder="Inserta tu DNI..." />
+      </mat-form-field>
+    </div>
+
+    <div class="right-element">
+      <button class="separation" mat-raised-button color="outlined">
+        Limpiar
+      </button>
+      <button class="separation" mat-raised-button color="warn">Buscar</button>
+      <button
+        class="separation"
+        routerLink="/add"
+        mat-raised-button
+        color="primary"
+      >
+        Nuevo
+      </button>
+    </div>
+  </div>
+</div>
+
+<div class="mat-elevation-z8">
+  <table mat-table [dataSource]="cvDataSource">
+    <ng-container matColumnDef="id">
+      <th mat-header-cell *matHeaderCellDef>Id</th>
+      <td mat-cell *matCellDef="let item">
+        <span>{{ item.cvId }}</span>
+      </td>
+    </ng-container>
+    <ng-container matColumnDef="nameTurist">
+      <th mat-header-cell *matHeaderCellDef>Nombre Completo</th>
+      <td mat-cell *matCellDef="let item">
+        <span>{{ item.cvNameTurist }}</span>
+      </td>
+    </ng-container>
+    <ng-container matColumnDef="dniTurist">
+      <th mat-header-cell *matHeaderCellDef>Dni</th>
+      <td mat-cell *matCellDef="let item">
+        <span>{{ item.cvDniTurist }}</span>
+      </td>
+    </ng-container>
+    <ng-container matColumnDef="costTravel">
+      <th mat-header-cell *matHeaderCellDef>Monto</th>
+      <td mat-cell *matCellDef="let item">
+        <span>{{ item.cvCostTravel }}</span>
+      </td>
+    </ng-container>
+    <ng-container matColumnDef="monthsFinancing">
+      <th mat-header-cell *matHeaderCellDef>Meses</th>
+      <td mat-cell *matCellDef="let item">
+        <span>{{ item.cvMonthsFinancing }}</span>
+      </td>
+    </ng-container>
+    <ng-container matColumnDef="cuota">
+      <th mat-header-cell *matHeaderCellDef>Cuota</th>
+      <td mat-cell *matCellDef="let item">
+        <span>{{
+          calculateCuota(item.cvCostTravel, item.cvMonthsFinancing)
+        }}</span>
+      </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="cvColumnsTable"></tr>
+    <tr mat-row *matRowDef="let row; columns: cvColumnsTable"></tr>
+  </table>
+  <mat-paginator
+    [pageSizeOptions]="[5, 10, 20]"
+    showFirstLastButtons
+    aria-label="Selecciona la pagina para el usuario"
+  ></mat-paginator>
+</div>

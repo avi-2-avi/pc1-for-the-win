@@ -1,0 +1,17 @@
+.separation {
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+
+.left-element {
+  float: left;
+}
+
+.right-element {
+  float: right;
+}
+
+.title {
+  margin-top: 10px;
+  margin-inline: 20px;
+}

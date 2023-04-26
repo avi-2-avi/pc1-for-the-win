@@ -1,0 +1,106 @@
+<form [formGroup]="cvForm">
+  <mat-form-field>
+    <mat-label>Id</mat-label>
+    <input matInput formControlName="id" />
+  </mat-form-field>
+  <br />
+
+  <br />
+
+  <mat-form-field>
+    <mat-label>Nombres</mat-label>
+    <input
+      matInput
+      formControlName="nameTurist"
+      placeholder="Inserta tu nombre..."
+    />
+    <div
+      *ngIf="
+        cvForm.get('nameTurist')?.hasError('required') &&
+        cvForm.get('nameTurist')?.touched
+      "
+    >
+      <span style="color: red"> Este campo es obligatorio </span>
+    </div>
+  </mat-form-field>
+  <br />
+
+  <br />
+
+  <mat-form-field>
+    <mat-label>Dni</mat-label>
+    <input
+      matInput
+      formControlName="dniTurist"
+      placeholder="Inserta tu DNI..."
+    />
+    <div
+      *ngIf="
+        cvForm.get('dniTurist')?.hasError('required') &&
+        cvForm.get('dniTurist')?.touched
+      "
+    >
+      <span style="color: red"> Este campo es obligatorio </span>
+    </div>
+  </mat-form-field>
+
+  <br />
+
+  <mat-form-field>
+    <mat-label>Monto</mat-label>
+    <input
+      matInput
+      formControlName="costTravel"
+      placeholder="Inserta el monto..."
+    />
+    <div
+      *ngIf="
+        cvForm.get('costTravel')?.hasError('required') &&
+        cvForm.get('costTravel')?.touched
+      "
+    >
+      <span style="color: red"> Este campo es obligatorio </span>
+    </div>
+  </mat-form-field>
+
+  <br />
+
+  <mat-form-field>
+    <mat-label>Meses</mat-label>
+    <input
+      matInput
+      formControlName="monthsFinancing"
+      placeholder="Inserta los meses..."
+    />
+    <div
+      *ngIf="
+        cvForm.get('monthsFinancing')?.hasError('required') &&
+        cvForm.get('monthsFinancing')?.touched
+      "
+    >
+      <span style="color: red"> Este campo es obligatorio </span>
+    </div>
+  </mat-form-field>
+
+  <br />
+
+  <div class="separation-l">
+    <button
+      class="separation"
+      mat-raised-button
+      color="primary"
+      (click)="addPackage()"
+      [disabled]="cvForm.invalid"
+    >
+      Guardar
+    </button>
+    <button
+      class="separation"
+      mat-raised-button
+      color="secondary"
+      (click)="onCancel()"
+    >
+      Cancelar
+    </button>
+  </div>
+</form>

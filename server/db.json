@@ -1,0 +1,60 @@
+{
+  "packages": [
+    {
+      "cvId": 1,
+      "cvNameTurist": "Paolo",
+      "cvDniTurist": "53415",
+      "cvCostTravel": 12,
+      "cvMonthsFinancing": 12
+    },
+    {
+      "cvId": 2,
+      "cvNameTurist": "Pan",
+      "cvDniTurist": "123",
+      "cvCostTravel": 100,
+      "cvMonthsFinancing": 12
+    },
+    {
+      "cvId": 3,
+      "cvNameTurist": "Prueba",
+      "cvDniTurist": "12344",
+      "cvCostTravel": 10000,
+      "cvMonthsFinancing": 18
+    },
+    {
+      "cvId": 4,
+      "cvNameTurist": "asdf",
+      "cvDniTurist": "234",
+      "cvCostTravel": 10000,
+      "cvMonthsFinancing": 18
+    },
+    {
+      "cvId": 5,
+      "cvNameTurist": "sfdg",
+      "cvDniTurist": "435",
+      "cvCostTravel": 234,
+      "cvMonthsFinancing": 23
+    },
+    {
+      "cvId": 6,
+      "cvNameTurist": "cristina",
+      "cvDniTurist": "123444",
+      "cvCostTravel": 12,
+      "cvMonthsFinancing": 33
+    },
+    {
+      "cvId": "10",
+      "cvNameTurist": "avi",
+      "cvDniTurist": "123",
+      "cvCostTravel": 10,
+      "cvMonthsFinancing": 11
+    },
+    {
+      "cvId": "11",
+      "cvNameTurist": "william",
+      "cvDniTurist": "123",
+      "cvCostTravel": 12,
+      "cvMonthsFinancing": 11
+    }
+  ]
+}
